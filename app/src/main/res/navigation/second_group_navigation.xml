@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/second_group_navigation"
+    app:startDestination="@id/fifthFragment">
+
+    <fragment
+        android:id="@+id/fifthFragment"
+        android:name="com.example.nav_homework.fragments.secondGroup.FifthFragment"
+        android:label="FifthFragment">
+        <action
+            android:id="@+id/action_fifthFragment_to_sixthFragment"
+            app:destination="@id/sixthFragment" />
+        <action
+            android:id="@+id/action_fifthFragment_to_seventhFragment"
+            app:destination="@id/seventhFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sixthFragment"
+        android:name="com.example.nav_homework.fragments.secondGroup.SixthFragment"
+        android:label="SixthFragment">
+        <action
+            android:id="@+id/action_sixthFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/seventhFragment"
+        android:name="com.example.nav_homework.fragments.secondGroup.SeventhFragment"
+        android:label="SeventhFragment">
+        <action
+            android:id="@+id/action_seventhFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+</navigation>

@@ -10,102 +10,16 @@
         android:label="FirstFragment" >
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
-            app:destination="@id/firstGroup" />
+            app:destination="@id/first_group_navigation" />
         <action
             android:id="@+id/action_firstFragment_to_fifthFragment"
-            app:destination="@id/secondGroup" />
+            app:destination="@id/second_group_navigation" />
         <action
             android:id="@+id/action_firstFragment_to_eighthFragment"
-            app:destination="@id/thirdGroup" />
+            app:destination="@id/third_group_navigation" />
     </fragment>
-    <navigation android:id="@+id/firstGroup"
-        app:startDestination="@id/secondFragment">
-        <fragment
-            android:id="@+id/secondFragment"
-            android:name="com.example.nav_homework.fragments.firstGroup.SecondFragment"
-            android:label="SecondFragment">
-            <action
-                android:id="@+id/action_secondFragment_to_thirdFragment"
-                app:destination="@id/thirdFragment" />
-            <action
-                android:id="@+id/action_secondFragment_to_fourthFragment"
-                app:destination="@id/fourthFragment" />
-        </fragment>
-        <fragment
-            android:id="@+id/thirdFragment"
-            android:name="com.example.nav_homework.fragments.firstGroup.ThirdFragment"
-            android:label="ThirdFragment">
-            <action
-                android:id="@+id/action_thirdFragment_to_firstFragment"
-                app:destination="@id/firstFragment" />
-        </fragment>
-        <fragment
-            android:id="@+id/fourthFragment"
-            android:name="com.example.nav_homework.fragments.firstGroup.FourthFragment"
-            android:label="FourthFragment">
-            <action
-                android:id="@+id/action_fourthFragment_to_firstFragment"
-                app:destination="@id/firstFragment" />
-        </fragment>
-    </navigation>
-    <navigation android:id="@+id/secondGroup"
-        app:startDestination="@id/fifthFragment">
-        <fragment
-            android:id="@+id/fifthFragment"
-            android:name="com.example.nav_homework.fragments.secondGroup.FifthFragment"
-            android:label="FifthFragment">
-            <action
-                android:id="@+id/action_fifthFragment_to_sixthFragment"
-                app:destination="@id/sixthFragment" />
-            <action
-                android:id="@+id/action_fifthFragment_to_seventhFragment"
-                app:destination="@id/seventhFragment" />
-        </fragment>
-        <fragment
-            android:id="@+id/sixthFragment"
-            android:name="com.example.nav_homework.fragments.secondGroup.SixthFragment"
-            android:label="SixthFragment">
-            <action
-                android:id="@+id/action_sixthFragment_to_firstFragment"
-                app:destination="@id/firstFragment" />
-        </fragment>
-        <fragment
-            android:id="@+id/seventhFragment"
-            android:name="com.example.nav_homework.fragments.secondGroup.SeventhFragment"
-            android:label="SeventhFragment">
-            <action
-                android:id="@+id/action_seventhFragment_to_firstFragment"
-                app:destination="@id/firstFragment" />
-        </fragment>
-    </navigation>
-    <navigation android:id="@+id/thirdGroup"
-        app:startDestination="@id/eighthFragment">
-        <fragment
-            android:id="@+id/eighthFragment"
-            android:name="com.example.nav_homework.fragments.thirdGroup.EighthFragment"
-            android:label="EighthFragment">
-            <action
-                android:id="@+id/action_eighthFragment_to_tenthFragment"
-                app:destination="@id/tenthFragment" />
-            <action
-                android:id="@+id/action_eighthFragment_to_ninthFragment"
-                app:destination="@id/ninthFragment" />
-        </fragment>
-        <fragment
-            android:id="@+id/ninthFragment"
-            android:name="com.example.nav_homework.fragments.thirdGroup.NinthFragment"
-            android:label="NinthFragment">
-            <action
-                android:id="@+id/action_ninthFragment_to_firstFragment"
-                app:destination="@id/firstFragment" />
-        </fragment>
-        <fragment
-            android:id="@+id/tenthFragment"
-            android:name="com.example.nav_homework.fragments.thirdGroup.TenthFragment"
-            android:label="TenthFragment">
-            <action
-                android:id="@+id/action_tenthFragment_to_firstFragment"
-                app:destination="@id/firstFragment" />
-        </fragment>
-    </navigation>
+
+    <include app:graph="@navigation/first_group_navigation" />
+    <include app:graph="@navigation/second_group_navigation" />
+    <include app:graph="@navigation/third_group_navigation" />
 </navigation>
